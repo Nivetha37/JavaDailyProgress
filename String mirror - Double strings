@@ -19,3 +19,6 @@ class Codechef
         }
 	}
 }
+
+//input: 2 ab bc
+//output:abab bcbc
