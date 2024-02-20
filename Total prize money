@@ -1,4 +1,5 @@
 // The code below is incorrect. Debug this code to solve the problem.
+// debugged code
 import java.util.Scanner;
 
 class Codechef
@@ -20,3 +21,10 @@ class Codechef
 		}
 	}
 }
+
+// input: 2
+80 1
+400 30
+//output:
+890
+6700
