@@ -1,0 +1,43 @@
+Mr.lucky is confused whether to go out and eat at the restaurant or order food online.
+
+The online order costs N rupees while the cost of eating at the restaurant is M rupees.
+
+However, Mr.lucky has a discount coupon with which he can avail flat 10% off on his online order.
+
+Find the cheaper option for Chef to eat, i.e., whether to order food online or eat at the restaurant?
+
+Input:                                    Output:
+4                                             ONLINE
+500 500                                       DINING
+500 400                                       DINING
+25 22                                         EITHER
+100 90
+
+PROGRAM:
+
+import java.util.*;
+
+class Codechef
+{
+    public static void main(String[] args) 
+    {
+        Scanner obj = new Scanner(System.in);
+        int t = obj.nextInt();
+        for (int i = 0; i < t; i++) {
+            int N = obj.nextInt();
+            int M = obj.nextInt();
+
+            float dis_price = N - (N * 0.1f);
+
+            if (dis_price == M) {
+                System.out.println("EITHER");
+            }
+            else if (dis_price < M) {
+                System.out.println("ONLINE");
+            }
+            else {
+                System.out.println("DINING");
+            }
+        }
+    }
+}
