@@ -27,9 +27,14 @@ class Result {
     int n = grades.size();
     ArrayList<Integer> result = new ArrayList<Integer>();
     for(int i=0;i<n;i++){
+
+        //grades greater than 37
+        
         if(grades.get(i)>=38){
             int temp = grades.get(i);
             for(int j=1;j<6;j++){
+
+                // to find nearest multiple of 5
                 if(temp%5==0){
                     int res=temp-grades.get(i);
                     if(res<3){
@@ -41,11 +46,14 @@ class Result {
                         break;
                     }                    
                 }
+                // if not a multiple of 5 increment the count
                 else{
                     temp+=1;
                 }
             }    
         }
+            
+        //grades less than 38
         else{
             result.add(grades.get(i));
             
