@@ -59,7 +59,7 @@ class Codechef
 
             int[] arr = {a,b,c};
             Arrays.sort(arr);
-            System.out.println(arr[0] + arr[1]);
+            System.out.println(arr[2] + arr[1]);
         }
     }
 }*/
