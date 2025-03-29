@@ -1,33 +1,21 @@
-/*Write an algorithm to determine if a number n is happy.
-
-A happy number is a number defined by the following process:
-
-Starting with any positive integer, replace the number by the sum of the squares of its digits.
-Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-Those numbers for which this process ends in 1 are happy.
-Return true if n is a happy number, and false if not.*/
-
+/*Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.*/
 class Solution {
-    static int Squaresum(int n){
-        int sum =0;
+    public int longestValidParentheses(String s) {
+        List<Character> ls = new ArrayList<>();
+        int count =0,top=-1;
+        for(char c : s.toCharArray()){
+            if(c=='('){
+                top++;
+                ls.add(c);
+            }
+            if(top!=-1 && ch==')' && ls.get(top)=='(') {
+                top--;
+                count+=2;
+            }
+            
 
-        while(n>0){
-            int dig = n%10;
-            sum+=(dig*dig);
-            n/=10;
+            if(top==1) return count;
         }
-        return sum;
-    }
-    public boolean isHappy(int n) {
-        
-        int slow = n,fast=n;
-        do{
-            slow = Squaresum(slow);
-            fast = Squaresum(Squaresum(fast));
-        }while(slow!=fast);
-
-        return slow==1;
-          
-
+        return count;
     }
 }
